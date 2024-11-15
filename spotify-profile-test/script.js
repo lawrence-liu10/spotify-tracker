@@ -1,6 +1,8 @@
-const clientId = "2294d257619c4560b77ebfbca8b172a7"; // Replace with your client ID
+import React from 'react';
+const clientId = import.meta.env.VITE_CLIENT_ID;
 const params = new URLSearchParams(window.location.search);
 const code = params.get("code");
+
 
 if (!code) {
     redirectToAuthCodeFlow(clientId);
